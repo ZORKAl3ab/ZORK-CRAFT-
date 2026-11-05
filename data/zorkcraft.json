@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "owner": {
+    "email": "zorkal3ab@gmail.com",
+    "password_hash": "6fd3538f2d33f09a9ba1c7c83864cbcad94fd64ef16ee819ed80c98ac9180f5e67764e8ce1f972d9a223800c8955c30638f57bdc6322115bd136be81ec237e8a",
+    "salt": "9d0714775eac0a2e36aa7480073da9e7",
+    "must_change_password": false,
+    "created_at": "2026-11-03T05:46:12.058Z",
+    "updated_at": "2026-11-03T06:23:05.455Z",
+    "last_login_at": "2026-11-03T06:22:53.504Z"
+  },
+  "sessions": [
+    {
+      "token": "8d1be9e5d3aa7f4750af2d7419b1cce630ec3efa4296a8047118ac20c18db888",
+      "email": "zorkal3ab@gmail.com",
+      "ip_address": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.8059.12 Safari/537.36",
+      "created_at": "2026-11-03T05:48:03.692Z",
+      "expires_at": "2026-11-10T05:48:03.692Z"
+    },
+    {
+      "token": "4f4dd5d9f6b4461ce90584d89941b9d1351e271c0a8596efea973c26596c0664",
+      "email": "zorkal3ab@gmail.com",
+      "ip_address": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.8059.12 Safari/537.36",
+      "created_at": "2026-11-03T06:22:53.504Z",
+      "expires_at": "2026-11-10T06:22:53.503Z"
+    }
+  ],
+  "resources": [],
+  "categories": [
+    {
+      "id": "mods",
+      "name": "Mods & Add-ons",
+      "name_ar": "مودات وإضافات",
+      "description_ar": "مودات وإضافات مخصصة ترفع مستوى تجربة البيدروك",
+      "accent_color": "#FF791F",
+      "icon": "Package",
+      "count": 0
+    },
+    {
+      "id": "shaders",
+      "name": "Shaders & Resource Packs",
+      "name_ar": "شيدرات وريـسورس باك",
+      "description_ar": "حزم تحسين الإضاءة والرسوميات وخامات الواقعية",
+      "accent_color": "#8ADFFF",
+      "icon": "Sparkles",
+      "count": 0
+    },
+    {
+      "id": "skins",
+      "name": "Skins",
+      "name_ar": "سكنات",
+      "description_ar": "مجموعات سكنات شخصيات حصرية وعالية الدقة",
+      "accent_color": "#9D72FF",
+      "icon": "User",
+      "count": 0
+    },
+    {
+      "id": "maps",
+      "name": "Maps & Worlds",
+      "name_ar": "خرائط وعوالم",
+      "description_ar": "عوالم مغامرات، باركور، وبناء جاهزة للاستكشاف",
+      "accent_color": "#35D16F",
+      "icon": "Compass",
+      "count": 0
+    },
+    {
+      "id": "versions",
+      "name": "Minecraft Versions",
+      "name_ar": "إصدارات ماينكرافت",
+      "description_ar": "تحديثات ومعلومات إصدارات Minecraft Bedrock الرسمية",
+      "accent_color": "#C5CBD5",
+      "icon": "Layers",
+      "count": 0
+    }
+  ],
+  "download_events": [],
+  "settings": {
+    "site_name": "ZORK CRAFT",
+    "site_description": "منصتك لاكتشاف إضافات ومحتوى Minecraft Bedrock.",
+    "maintenance_mode": false,
+    "ads_enabled": false,
+    "ads_banner_home": false,
+    "ads_banner_details": false,
+    "ads_provider_code": ""
+  },
+  "audit_logs": [
+    {
+      "id": "093b691b-4694-44fb-9458-7ca7d01cf784",
+      "event_type": "password_changed",
+      "details": "Owner password updated successfully",
+      "ip_hash": "12ca17b49af2",
+      "timestamp": "2026-11-03T06:23:05.455Z",
+      "success": true
+    },
+    {
+      "id": "0ddff892-658c-4e14-bc29-109a6daf5000",
+      "event_type": "login_success",
+      "details": "Owner authenticated successfully",
+      "ip_hash": "12ca17b49af2",
+      "timestamp": "2026-11-03T06:22:53.504Z",
+      "success": true
+    },
+    {
+      "id": "e05b2d65-bdb8-487c-ae80-636fb9d85079",
+      "event_type": "login_failed",
+      "details": "Failed password attempt for owner account",
+      "ip_hash": "12ca17b49af2",
+      "timestamp": "2026-11-03T06:22:41.748Z",
+      "success": false
+    },
+    {
+      "id": "c2ca2c32-1c31-4230-80da-955dc7957021",
+      "event_type": "login_failed",
+      "details": "Attempted login with unauthorized email: stranger@gmail.com",
+      "ip_hash": "12ca17b49af2",
+      "timestamp": "2026-11-03T06:22:30.730Z",
+      "success": false
+    },
+    {
+      "id": "9a6b551a-a973-4fa9-ba07-b4adb1d25a60",
+      "event_type": "password_changed",
+      "details": "Owner password updated successfully",
+      "ip_hash": "12ca17b49af2",
+      "timestamp": "2026-11-03T05:48:14.583Z",
+      "success": true
+    },
+    {
+      "id": "bb8f99e7-9ae4-4898-81b4-8f7ee02f3e1b",
+      "event_type": "login_success",
+      "details": "Owner authenticated successfully",
+      "ip_hash": "12ca17b49af2",
+      "timestamp": "2026-11-03T05:48:03.692Z",
+      "success": true
+    },
+    {
+      "id": "ef943ce1-dace-483d-85f7-a7b893048539",
+      "event_type": "login_success",
+      "details": "Initial database created with owner allowlist",
+      "ip_hash": "system",
+      "timestamp": "2026-11-03T05:46:12.059Z",
+      "success": true
+    }
+  ]
+}

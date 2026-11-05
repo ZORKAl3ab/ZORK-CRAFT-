@@ -1,0 +1,230 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --cosmic-black: #07070B;
+    --deep-space: #101018;
+    --dark-crimson: #270B18;
+    --neon-red: #FF284A;
+    --bright-orange: #FF791F;
+    --sky-blue: #8ADFFF;
+    --metallic-silver: #C5CBD5;
+    --emerald-green: #35D16F;
+    --purple-accent: #9D72FF;
+  }
+
+  body {
+    font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+    background-color: #07070B;
+    color: #C5CBD5;
+    direction: rtl;
+    text-align: right;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Changa', 'Cairo', sans-serif;
+  }
+}
+
+/* Custom subtle gaming scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07070B;
+}
+::-webkit-scrollbar-thumb {
+  background: #270B18;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF284A;
+}
+
+/* Metallic and glow utility classes */
+.metallic-card {
+  background: linear-gradient(135deg, rgba(25, 25, 38, 0.88) 0%, rgba(13, 13, 20, 0.96) 100%);
+  border: 1px solid rgba(197, 203, 213, 0.14);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.metallic-card-hover {
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.metallic-card-hover:hover {
+  border-color: rgba(255, 40, 74, 0.45);
+  box-shadow: 0 16px 36px -8px rgba(39, 11, 24, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  transform: translateY(-3px);
+}
+
+.metallic-glow-red {
+  box-shadow: 0 0 25px -5px rgba(255, 40, 74, 0.35);
+}
+
+.metallic-glow-emerald {
+  box-shadow: 0 0 25px -5px rgba(53, 209, 111, 0.4);
+}
+
+/* Safe area insets for Android and modern phones */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+/* --- ANIMATION SYSTEM V2 --- */
+
+/* Subtle metallic sweep animation for logo and featured cards */
+@keyframes metallic-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  40% {
+    transform: translateX(200%) skewX(-20deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(200%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.metallic-shimmer-sweep {
+  position: relative;
+  overflow: hidden;
+}
+.metallic-shimmer-sweep::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.03) 20%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(53, 209, 111, 0.2) 65%,
+    transparent 100%
+  );
+  pointer-events: none;
+  animation: metallic-sweep 6s infinite ease-in-out;
+}
+
+/* Creeper Shake Animation (Anticipation) */
+@keyframes creeper-anticipation-shake {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  15% {
+    transform: translate3d(-3px, -1px, 0) rotate(-2.5deg);
+  }
+  30% {
+    transform: translate3d(3px, 1px, 0) rotate(2.5deg);
+  }
+  45% {
+    transform: translate3d(-4px, -2px, 0) rotate(-3deg);
+  }
+  60% {
+    transform: translate3d(4px, -1px, 0) rotate(3deg);
+  }
+  75% {
+    transform: translate3d(-2px, 0, 0) rotate(-1.5deg);
+  }
+  90% {
+    transform: translate3d(2px, 1px, 0) rotate(1.5deg);
+  }
+}
+
+.animate-creeper-shake {
+  animation: creeper-anticipation-shake 0.12s infinite ease-in-out;
+}
+
+/* Emerald Shockwave Expansion */
+@keyframes shockwave-expand {
+  0% {
+    transform: scale(0.2);
+    opacity: 1;
+    border-width: 6px;
+  }
+  50% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+.animate-shockwave {
+  animation: shockwave-expand 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Emerald Ambient Breathe */
+@keyframes emerald-breathe {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(53, 209, 111, 0.3), inset 0 0 10px rgba(53, 209, 111, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(53, 209, 111, 0.65), inset 0 0 20px rgba(53, 209, 111, 0.4);
+  }
+}
+
+.animate-emerald-breathe {
+  animation: emerald-breathe 2.5s infinite ease-in-out;
+}
+
+/* Modal Spring Entrance */
+@keyframes modal-spring {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-modal-spring {
+  animation: modal-spring 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Accessible comfortable touch target for Footer Owner Lock */
+.touch-target-lock {
+  min-height: 48px;
+  min-width: 130px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Reduced Motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .metallic-shimmer-sweep::after {
+    display: none !important;
+  }
+  .animate-creeper-shake {
+    animation: none !important;
+  }
+  .animate-shockwave {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+}
